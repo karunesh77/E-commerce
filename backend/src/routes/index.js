@@ -4,7 +4,7 @@ import productRoutes      from "../features/products/product.routes.js";
 import categoryRoutes     from "../features/categories/category.routes.js";
 import cartRoutes         from "../features/cart/cart.routes.js";
 import orderRoutes        from "../features/orders/order.routes.js";
-import paymentRoutes      from "../features/payments/payment.routes.js";
+// import paymentRoutes      from "../features/payments/payment.routes.js"; // DISABLED — Razorpay commented in config/razorpay.js
 import wishlistRoutes     from "../features/wishlist/wishlist.routes.js";
 import reviewRoutes       from "../features/reviews/review.routes.js";
 import userRoutes         from "../features/users/user.routes.js";
@@ -25,7 +25,7 @@ router.use("/products",      productRoutes);
 router.use("/categories",    categoryRoutes);
 router.use("/cart",          cartRoutes);
 router.use("/orders",        orderRoutes);
-router.use("/payments",      paymentRoutes);
+// router.use("/payments",      paymentRoutes); // DISABLED — see razorpay.js note
 router.use("/wishlist",      wishlistRoutes);
 router.use("/users",         userRoutes);
 router.use("/admin",         adminRoutes);

@@ -44,6 +44,11 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
   customCss: ".swagger-ui .topbar { display: none }",
 }));
 
+app.use("/health", (req, res) => {
+  res.json({ success: true, message: "Server is running" });
+});
+
+
 // ─── Routes ───────────────────────────────────────────────────
 app.use("/api/v1", routes);
 
