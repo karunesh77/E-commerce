@@ -19,9 +19,12 @@ app.use(helmet());
 // (customer frontend aur admin panel — alag ports pe chalte hain)
 const allowedOrigins = process.env.CLIENT_URL?.split(",").map((o) => o.trim());
 app.use(cors({
-  origin: allowedOrigins,
+   origin: [
+    "http://localhost:5173",
+    "https://YOUR-CLOUDFRONT-DOMAIN.cloudfront.net"
+  ],
   credentials: true,
-}));
+}));  
 
 // ─── Rate Limiting ─────────────────────────────────────────────
 const limiter = rateLimit({
