@@ -3,4 +3,4 @@
 2. this is for pull req,switch
 
 
-3. dilivery charges is 50 rupes.
+3. dilivery charges is free .
